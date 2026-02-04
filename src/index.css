@@ -1,70 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    --font-heading: "Barlow Condensed", serif;
+    --font-body: "Inter", sans-serif;
   }
 }
+/* Basic styling for each product feature box */
+
+/* Grid container for the products */
+.section-padding {
+  padding: 50px 50px;
+}
+
+.page-title {
+  margin-bottom: 40px;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-content: space-between;
+  gap: 50px;
+  padding: 15px;
+}
+
+/* Product box styling */
+.feature-box {
+  width: 350px;
+  height: fit-content;
+  padding: 30px;
+  transition: all 0.3s ease;
+  background-color: white;
+  border-radius: 15px;
+}
+
+/* Hover effect */
+.feature-box:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+  background-color: #eeeeee; /* Light gray background on hover */
+}
+
+/* Heading style */
+.feature-box h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Paragraph style */
+.feature-box p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.feature-box:hover h4,
+.feature-box:hover p {
+  color: #000000; /* Text color change to white on hover */
+}
+
+/* Optional: If you want to adjust the text color for normal state */
+.feature-box h4{
+  color: #333; /* Default text color */
+}
+
+.feature-box p {
+  color:rgb(72, 79, 85)
+}
+
+/* .background-pattern{
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='29' height='50.115' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23ffffffff'/><path d='M14.498 16.858L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z'  stroke-width='1' stroke='%2300000007' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} */
+
+.header-img{
+  background-image: url("../images/background-image.jpg");
+  background-size: cover;
+}
+
+@keyframes flipIn {
+  0% { transform: rotateY(90deg); opacity: 0; }
+  100% { transform: rotateY(0deg); opacity: 1; }
+}
+  
+@keyframes flipOut {
+  0% { transform: rotateY(0deg); opacity: 1; }
+  100% { transform: rotateY(90deg); opacity: 0; }
+}
+
+.flip-in {
+  animation: flipIn 500ms ease-in-out forwards;
+}
+
+.flip-out {
+  animation: flipOut 500ms ease-in-out forwards;
+}
+  

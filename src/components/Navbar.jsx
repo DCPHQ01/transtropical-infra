@@ -31,27 +31,27 @@ const Navbar = () => {
           isHome ? "fixed" : "sticky"
         } top-0 right-0 left-0 transition-all duration-300 z-30  ${
           isHome && isNotTop
-            ? "text-red-600 shadow-md backdrop-blur-lg bg-white/30"
+            ? "text-black shadow-md backdrop-blur-lg bg-white/30"
             : !isHome
-            ? "text-red-600 shadow-md backdrop-blur-lg bg-white/30"
+            ? "text-black shadow-md backdrop-blur-lg bg-white/30"
             : "text-white"
         }`}
         data-spy="affix"
         data-offset-top="197"
       >
-        <div className="flex justify-between items-center gap-6 sm:py-3 lg:px-30 px-4 py-3">
+        <div className="flex justify-between items-center gap-6 lg:px-30 px-4 py-2">
           <div className="brand">
             <NavLink className="brand-link" to="/">
               <img
                 src="/images/logo.png"
                 alt="Logo"
-                className="w-20 sm:w-24 md:w-32 lg:w-40 object-contain"
+                className="w-16 sm:w-20 md:w-24 lg:w-28 object-contain"
               />
             </NavLink>
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex text-base lg:text-xl gap-10">
+          <ul className="hidden md:flex text-base lg:text-md gap-10">
             <li className="active">
               <NavLink
                 to="/"
@@ -69,8 +69,8 @@ const Navbar = () => {
                 to="/services"
                 className={({ isActive }) =>
                   isActive
-                    ? "border-b-2 pb-5 border-red-600"
-                    : "hover:border-b-2 pb-5 hover:border-red-300"
+                    ? "border-b-2 pb-5 border-green-800"
+                    : "hover:border-b-2 pb-5 hover:border-green-600"
                 }
               >
                 SERVICES
@@ -81,8 +81,8 @@ const Navbar = () => {
                 to="/about"
                 className={({ isActive }) =>
                   isActive
-                    ? "border-b-2 pb-5 border-red-600"
-                    : "hover:border-b-2 pb-5 hover:border-red-300"
+                    ? "border-b-2 pb-5 border-green-800"
+                    : "hover:border-b-2 pb-5 hover:border-green-600"
                 }
               >
                 ABOUT
@@ -93,8 +93,8 @@ const Navbar = () => {
                 to="/projects"
                 className={({ isActive }) =>
                   isActive
-                    ? "border-b-2 pb-5 border-red-600"
-                    : "hover:border-b-2 pb-5 hover:border-red-300"
+                    ? "border-b-2 pb-5 border-green-800"
+                    : "hover:border-b-2 pb-5 hover:border-green-600"
                 }
               >
                 PROJECTS
@@ -105,8 +105,8 @@ const Navbar = () => {
                 to="/contact"
                 className={({ isActive }) =>
                   isActive
-                    ? "border-b-2 pb-5 border-red-600"
-                    : "hover:border-b-2 pb-5 hover:border-red-300"
+                    ? "border-b-2 pb-5 border-green-800"
+                    : "hover:border-b-2 pb-5 hover:border-green-600"
                 }
               >
                 CONTACT

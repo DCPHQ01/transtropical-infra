@@ -39,7 +39,7 @@ const Navbar = () => {
         data-spy="affix"
         data-offset-top="197"
       >
-        <div className="flex justify-between items-center gap-6 lg:px-30 px-4 py-2">
+        <div className="flex justify-between items-center gap-6 lg:px-14 px-4 py-2">
           <div className="brand">
             <NavLink className="brand-link" to="/">
               <img
@@ -57,8 +57,8 @@ const Navbar = () => {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "border-b-2 pb-5 border-green-800"
-                    : "hover:border-b-2 pb-5 hover:border-green-600"
+                    ? "border-b-2 pb-2 border-green-700"
+                    : "hover:border-b-2 pb-2 hover:border-green-600"
                 }
               >
                 HOME
@@ -69,8 +69,8 @@ const Navbar = () => {
                 to="/services"
                 className={({ isActive }) =>
                   isActive
-                    ? "border-b-2 pb-5 border-green-800"
-                    : "hover:border-b-2 pb-5 hover:border-green-600"
+                    ? "border-b-2 pb-2 border-green-800"
+                    : "hover:border-b-2 pb-2 hover:border-green-600"
                 }
               >
                 SERVICES
@@ -81,8 +81,8 @@ const Navbar = () => {
                 to="/about"
                 className={({ isActive }) =>
                   isActive
-                    ? "border-b-2 pb-5 border-green-800"
-                    : "hover:border-b-2 pb-5 hover:border-green-600"
+                    ? "border-b-2 pb-2 border-green-800"
+                    : "hover:border-b-2 pb-2 hover:border-green-600"
                 }
               >
                 ABOUT
@@ -93,8 +93,8 @@ const Navbar = () => {
                 to="/projects"
                 className={({ isActive }) =>
                   isActive
-                    ? "border-b-2 pb-5 border-green-800"
-                    : "hover:border-b-2 pb-5 hover:border-green-600"
+                    ? "border-b-2 pb-2 border-green-800"
+                    : "hover:border-b-2 pb-2 hover:border-green-600"
                 }
               >
                 PROJECTS
@@ -105,8 +105,8 @@ const Navbar = () => {
                 to="/contact"
                 className={({ isActive }) =>
                   isActive
-                    ? "border-b-2 pb-5 border-green-800"
-                    : "hover:border-b-2 pb-5 hover:border-green-600"
+                    ? "border-b-2 pb-2 border-green-800"
+                    : "hover:border-b-2 pb-2 hover:border-green-600"
                 }
               >
                 CONTACT

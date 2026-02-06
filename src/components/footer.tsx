@@ -12,8 +12,7 @@ const Footer = () => {
         <footer className="bg-green-800 text-white lg:px-14 px-4 py-10">
             <div className="w-full mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                    <div>
-                        {/* <h3 className="font-bold text-lg mb-4">About</h3> */}
+                    <div className="pr-10">
                         <img src="/images/logo.png" alt="Transtropical Infrastructures Logo" className="w-32 mb-4" />
                         <p className="text-white text-sm">Delivering global standard solutions across multiple sectors with technical excellence and sustainable development.</p>
                     </div>

@@ -312,10 +312,13 @@ function Home() {
 
         {/* SECTION 5 */}
         <section className=" text-white py-28 lg:px-14 px-4 flex flex-col lg:flex-row items-center gap-12">
-          <div className="">
-            <img src="../images/section-5.jpg" alt="Section 5 Image" className="w-full h-auto object-cover shadow-lg" />
+          <div className='relative group'>
+            <img src="../images/section-5.jpg" alt="Section 5 Image" className="w-full h-auto object-cover shadow-lg grayscale transition-all duration-500 group-hover:grayscale-0" />
+            <div className="absolute -right-6 -bottom-6 bg-green-700 p-8 flex items-center justify-center">
+              <p className="text-white text-2xl font-bold">25+</p>
+            </div>
           </div>
-          <div className="">
+          <div>
             <div className="max-w-3xl">
               {/* Tag line */}
               <p className="text-green-700 tracking-widest text-md font-bold mb-5">

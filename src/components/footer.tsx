@@ -61,7 +61,7 @@ const Footer = () => {
                     <div className="flex space-x-5">
                         <div className="h-7 w-7 flex justify-center items-center">
                         <a 
-                            href="https://www.facebook.com/abisgroup.africa" 
+                            href="#" 
                             className="text-primary hover:text-green-400 transition-colors duration-200"
                             aria-label="Facebook"
                             target="_blank" 
@@ -91,7 +91,7 @@ const Footer = () => {
                         </div>  
                         <div className="h-7 w-7 flex justify-center items-center">
                         <a 
-                            href="https://www.linkedin.com/company/abisgroupafrica/" 
+                            href="#" 
                             className="text-primary hover:text-green-400 transition-colors duration-200"
                             aria-label="LinkedIn"
                             target="_blank"

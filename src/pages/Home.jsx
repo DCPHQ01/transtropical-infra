@@ -3,11 +3,11 @@ import { FiAward, FiGlobe } from "react-icons/fi";
 import { FaArrowRight, FaRegChartBar } from "react-icons/fa";
 import { CiRuler } from "react-icons/ci";
 import { IoFlashOutline } from "react-icons/io5";
-import { FaHelmetSafety } from "react-icons/fa6";
+import { AiOutlineTeam } from "react-icons/ai";
+import { FaHelmetSafety, FaLocationDot } from "react-icons/fa6";
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import { SiTicktick } from "react-icons/si";
 import { Link } from 'react-router-dom';
-// import { useState } from "react";
 
 function Home() {
 
@@ -125,7 +125,7 @@ function Home() {
           {about.map(item => (
             <div
               key={item.id}
-              className="group border border-gray-300 shadow-lg bg-white
+              className="group border border-gray-100 shadow-lg bg-white
                         p-8 flex flex-col justify-center
                         hover:bg-gray-100 transition"
             >
@@ -347,6 +347,81 @@ function Home() {
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 6 */}
+        <section className="bg-green-50 py-16 px-4 lg:px-14">
+          <div className="mx-auto flex flex-col items-center">
+
+            {/* Section Title */}
+            <div className="flex flex-col items-center gap-3 mb-20">
+              <p className="text-green-700 text-md md:text-2xl lg:text-3xl font-bold">
+                Why Choose Transtropical
+              </p>
+              <span className="w-24 h-1 bg-green-700"></span>
+            </div>
+
+            {/* Feature Grid */}
+            <div className="flex flex-row justify-between items-center gap-8 flex-wrap w-full">
+
+              <div className="flex flex-col items-center gap-4">
+                <div className="bg-white rounded-full p-5 border border-gray-200 flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-130">
+                  <AiOutlineTeam className="text-green-700 text-2xl md:text-3xl" />
+                </div>
+                <p className="text-green-700 font-medium text-center">
+                  Multidisciplinary Team
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center gap-4">
+                <div className="bg-white rounded-full p-5 border border-gray-200 flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-130">
+                  <IoFlashOutline className="text-green-700 text-2xl md:text-3xl" />
+                </div>
+                <p className="text-green-700 font-medium text-center">
+                  Cutting-Edge Technology
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center gap-4">
+                <div className="bg-white rounded-full p-5 border border-gray-200 flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-130">
+                  <FiGlobe className="text-green-700 text-2xl md:text-3xl" />
+                </div>
+                <p className="text-green-700 font-medium text-center">
+                  Global Partnerships
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center gap-4">
+                <div className="bg-white rounded-full p-5 border border-gray-200 flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-130">
+                  <FaLocationDot className="text-green-700 text-2xl md:text-3xl" />
+                </div>
+                <p className="text-green-700 font-medium text-center">
+                  Local Expertise
+                </p>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 7 */}
+        <section className="py-28 lg:px-14 px-4 flex items-center justify-center gap-12">
+          <div className='relative'>
+            <p className="text-3xl md:text-4xl lg:text-6xl font-bold mb-10 w-2xl text-center">
+              Ready to build the <span className="text-green-700">future</span> with us?
+            </p>
+            <p className="text-lg text-gray-500 mb-10 text-center">
+              Contact our team to discuss your infrastructure, engineering, or real estate needs.
+            </p>
+            <div className="flex justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center bg-green-700 hover:bg-green-800 text-white font-bold py-5 px-8 transition duration-300"
+              >
+                GET IN TOUCH
+              </Link>
             </div>
           </div>
         </section>
